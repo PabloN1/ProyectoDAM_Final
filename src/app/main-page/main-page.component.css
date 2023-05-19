@@ -44,5 +44,16 @@ body{
 #info{
     min-height: 550px;
     text-align: center;
-    font-size: x-large;
+}
+
+@media (min-width: 1200px) {
+    #info{
+        font-size: small;
+    }
+}
+
+@media (min-width:  1199.98px) {
+    #info{
+        font-size: x-large;
+    }
 }

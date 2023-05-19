@@ -1,0 +1,8 @@
+<div id="numpreguntas">
+</div>
+<div>{{questions[indice].Pregunta}}</div>
+  <div *ngFor="let respuesta of questions[indice].ValorRespuesta">
+    <input type="radio" id="respuesta" name="pregunta">
+    <label for="respuesta">{{respuesta}}</label>
+  </div>
+<button id="Siguiente" type="button" class="btn" (click)='siguiente()'>Siguiente</button>
