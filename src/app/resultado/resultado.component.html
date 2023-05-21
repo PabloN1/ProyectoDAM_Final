@@ -13,14 +13,178 @@
     <div id="test_container" class="card row col-xl-10 offset-xl-1 col-8 offset-2" >
       <div>
         <div class="row card-body">
-            <div *ngIf="resultado=='positivo'" id="info"class="card">
-                Positivo
+            <div *ngIf="resultado=='positivoasdi'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que usted o la persona a examinar ha superado el test de valoración inicial, dando positivo en él.</span>
+              <span>Para ser positivo debería sacar mas de 12 puntos</span>   
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
             </div>
-            <div *ngIf="resultado=='negativo'" id="info"class="card">
-                Negativo
+            <div *ngIf="resultado=='negativoasdi'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que la usted o la persona a examinar no ha superado el test de valoración inicial, dando negativo en el.</span>
+              <span>Para ser positivo debería sacar mas de 12 puntos</span>   
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+            </div>
+            <div *ngIf="resultado=='dudosoasdi'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que usted o la persona a examinar ha dado resultado cerca del limite entre positivo y negativo</span>
+              <span>Para ser positivo debería sacar mas de 12 puntos</span>      
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+            </div>
+            <div *ngIf="resultado=='positivoaaa'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que usted o la persona a examinar ha superado el test de valoración inicial, dando positivo en él.</span>
+              <span>Para ser positivo debería sacar la siguiente puntuación en la siguiente tabla</span>  
+              
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sección</th>
+                    <th scope="col">Dominio</th>
+                    <th scope="col">Sintomas Requeridos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">A Max(5)</th>
+                    <td>Social</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">B Max(5)</th>
+                    <td>Obsesiones</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">C Max(5)</th>
+                    <td>Comunicación</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">D Max(3)</th>
+                    <td>Imaginación</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">E Max(5)</th>
+                    <td>Prerequisitos</td>
+                    <td>5</td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              <span>Su Resultado es: <b>A:</b>{{a}} <b>B:</b>{{b}}  <b>C:</b>{{c}}  <b>D:</b>{{d}}  <b>E:</b>{{e}}</span> 
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+            </div>
+            <div *ngIf="resultado=='negativoaaa'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que la usted o la persona a examinar no ha superado el test de valoración inicial, dando negativo en el.</span>
+              <span>Para ser positivo debería sacar la siguiente puntuación en la siguiente tabla</span>   
+              
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sección</th>
+                    <th scope="col">Dominio</th>
+                    <th scope="col">Sintomas Requeridos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">A Max(5)</th>
+                    <td>Social</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">B Max(5)</th>
+                    <td>Obsesiones</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">C Max(5)</th>
+                    <td>Comunicación</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">D Max(3)</th>
+                    <td>Imaginación</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">E Max(5)</th>
+                    <td>Prerequisitos</td>
+                    <td>5</td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              <span>Su Resultado es: <b>A:</b>{{a}} <b>B:</b>{{b}}  <b>C:</b>{{c}}  <b>D:</b>{{d}}  <b>E:</b>{{e}}</span>  
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+            </div>
+            <div *ngIf="resultado=='dudosoaaa'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que usted o la persona a examinar ha dado resultado cerca del limite entre positivo y negativo</span>
+              <span>Para ser positivo debería sacar la siguiente puntuación en la siguiente tabla</span>  
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sección</th>
+                    <th scope="col">Dominio</th>
+                    <th scope="col">Sintomas Requeridos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">A Max(5)</th>
+                    <td>Social</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">B Max(5)</th>
+                    <td>Obsesiones</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">C Max(5)</th>
+                    <td>Comunicación</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">D Max(3)</th>
+                    <td>Imaginación</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">E Max(5)</th>
+                    <td>Prerequisitos</td>
+                    <td>5</td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              <span>Su Resultado es: <b>A:</b>{{a}} <b>B:</b>{{b}}  <b>C:</b>{{c}}  <b>D:</b>{{d}}  <b>E:</b>{{e}}</span> 
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+            </div>
+            <div *ngIf="resultado=='positivoaqa'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que usted o la persona a examinar ha superado el test de valoración inicial, dando positivo en él.</span>
+              <span>Para ser positivo debería sacar mas de 30 puntos</span>   
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+            </div>
+            <div *ngIf="resultado=='negativoaqa'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que la usted o la persona a examinar no ha superado el test de valoración inicial, dando negativo en el.</span>
+              <span>Para ser positivo debería sacar mas de 30 puntos</span>   
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+            </div>
+            <div *ngIf="resultado=='dudosoaqa'" id="info"class="card">
+              <span>Has obtenido un resultado de: {{puntuacion}}</span>
+              <span>Este resultado indica que usted o la persona a examinar ha dado resultado cerca del limite entre positivo y negativo</span>
+              <span>Para ser positivo debería sacar mas de 30 puntos</span>   
+              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
             </div>
           </div>
-          <div *ngIf="resultado=='positivo'" class="text-center">
+          <div class="text-center">
             <button class="btn btn-primary">Siguiente</button>
           </div>
       </div>

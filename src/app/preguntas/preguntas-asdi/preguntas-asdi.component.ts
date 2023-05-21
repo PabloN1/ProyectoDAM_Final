@@ -20,6 +20,7 @@ export class PreguntasASDIComponent {
     for (let index = 0; index < this.questions.length; index++) {
       this.puntuacionAnterior.push(0);
     }
+    
   }
 
   public siguiente(){
@@ -48,12 +49,15 @@ export class PreguntasASDIComponent {
 
     if(this.indice==this.questions.length){
       console.log("FIN");
-      if(this.puntuacion>=10){
-        this.presultado.resultado="positivo"
+      if((this.puntuacion>=10 && this.puntuacion<12) || (this.puntuacion<=10 && this.puntuacion>8) ){
+        this.presultado.resultado="dudosoasdi";
+      }else if(this.puntuacion>12){
+        this.presultado.resultado="positivoasdi"
       }else{
-        this.presultado.resultado="negativo"
+        this.presultado.resultado="negativoasdi"
       }
-      this.router.navigate(['resultado'])
+      this.presultado.puntuacion=this.puntuacion;
+      this.router.navigate(['resultado']);
     }
   }
 

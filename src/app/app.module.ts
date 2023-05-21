@@ -12,7 +12,9 @@ import { PreguntasEAComponent } from './preguntas/preguntas-ea/preguntas-ea.comp
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ResultadoComponent } from './resultado/resultado.component'
+import { ResultadoComponent } from './resultado/resultado.component';
+import { ResultadoEAComponent } from './resultado-ea/resultado-ea.component';
+import { ListaAsociacionComponent } from './lista-asociacion/lista-asociacion.component'
 
 const routes: Routes = []
 @NgModule({
@@ -24,7 +26,9 @@ const routes: Routes = []
     PreguntasAQAComponent,
     PreguntasEAComponent,
     MainPageComponent,
-    ResultadoComponent
+    ResultadoComponent,
+    ResultadoEAComponent,
+    ListaAsociacionComponent
   ],
   imports: [
     BrowserModule,

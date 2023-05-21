@@ -73,11 +73,14 @@ export class PreguntasAQAComponent {
 
     if(this.indice==this.questions.length){
       console.log("FIN");
-      if(this.puntuacion>=30){
-        this.presultado.resultado="positivo"
+      if((this.puntuacion>=30 && this.puntuacion<32) || (this.puntuacion<=30 && this.puntuacion>28)){
+        this.presultado.resultado="dudosoaqa"
+      }else if(this.puntuacion>=32){
+        this.presultado.resultado="positivoaqa"
       }else{
-        this.presultado.resultado="negativo"
+        this.presultado.resultado="negativoaqa"
       }
+      this.presultado.puntuacion=this.puntuacion;
       this.router.navigate(['resultado'])
     }
   }

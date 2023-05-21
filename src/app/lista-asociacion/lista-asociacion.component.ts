@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { Firestore, collection, getDoc,collectionData } from '@angular/fire/firestore'
-import { ActivatedRoute, Router, } from '@angular/router';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Router, ActivatedRoute } from '@angular/router';
 import { DatoUsuarioService } from '../services/dato-usuario.service';
+
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  selector: 'app-lista-asociacion',
+  templateUrl: './lista-asociacion.component.html',
+  styleUrls: ['./lista-asociacion.component.css']
 })
-export class MainPageComponent {
-  title = 'PTea';
+export class ListaAsociacionComponent {
   public questions: any[]=[];
   public indice=0
   constructor(private firestore: Firestore, private router: Router, private route: ActivatedRoute, private datoUsuario: DatoUsuarioService){
-    
+    this.getData()
   }
 
   public siguiente(){
@@ -54,7 +54,7 @@ export class MainPageComponent {
   }
 
   getData(){
-    const collectionInstance = collection(this.firestore,'PreguntasAAA');
+    const collectionInstance = collection(this.firestore,'Asociaciones');
     collectionData(collectionInstance).subscribe(val => {
       console.log(val)
       this.questions=val
@@ -63,3 +63,4 @@ export class MainPageComponent {
 
 
 }
+

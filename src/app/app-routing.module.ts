@@ -6,6 +6,8 @@ import { PreguntasAQAComponent } from './preguntas/preguntas-aqa/preguntas-aqa.c
 import { PreguntasASDIComponent } from './preguntas/preguntas-asdi/preguntas-asdi.component';
 import { PreguntasEAComponent } from './preguntas/preguntas-ea/preguntas-ea.component';
 import { ResultadoComponent } from './resultado/resultado.component';
+import { ResultadoEAComponent } from './resultado-ea/resultado-ea.component';
+import { ListaAsociacionComponent } from './lista-asociacion/lista-asociacion.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: 'preguntas-aqa', component: PreguntasAQAComponent},
   { path: 'preguntas-asdi', component: PreguntasASDIComponent},
   { path: 'preguntas-ea', component: PreguntasEAComponent},
-  { path: 'resultado', component: ResultadoComponent}
+  { path: 'resultado', component: ResultadoComponent},
+  { path: 'resultado-ea', component: ResultadoEAComponent},
+  { path: 'lista-asociacion', component: ListaAsociacionComponent}
 ];
 
 @NgModule({

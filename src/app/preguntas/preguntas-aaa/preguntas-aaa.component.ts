@@ -65,20 +65,26 @@ export class PreguntasAAAComponent {
         }
 
         if(this.puntuacionE<5){
-          this.presultado.resultado="negativo"
+          this.presultado.resultado="negativoaaa"
         }
 
         if(this.dudoso==0){
-          this.presultado.resultado="positivo"
+          this.presultado.resultado="positivoaaa"
         }else if(this.dudoso<2){
-          this.presultado.resultado="dudoso"
+          this.presultado.resultado="dudosoaaa"
         }else{
-          this.presultado.resultado="negativo"
+          this.presultado.resultado="negativoaaa"
         }
         
       }else{
-        this.presultado.resultado="negativo"
+        this.presultado.resultado="negativoaaa"
       }
+      this.presultado.puntuacion=this.puntuacion;
+      this.presultado.A=this.puntuacionA
+      this.presultado.B=this.puntuacionB
+      this.presultado.C=this.puntuacionC
+      this.presultado.D=this.puntuacionD
+      this.presultado.E=this.puntuacionE
       this.router.navigate(['resultado'])
     }
   }
