@@ -47,6 +47,6 @@ export class ResultadoEAComponent {
   }
 
   contactos(){
-    this.router.navigate(['/preguntas-aaa'])
+    this.router.navigate(['/lista-asociacion'])
   }
 }

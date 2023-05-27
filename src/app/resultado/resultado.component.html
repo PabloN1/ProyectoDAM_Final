@@ -17,19 +17,19 @@
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
               <span>Este resultado indica que usted o la persona a examinar ha superado el test de valoración inicial, dando positivo en él.</span>
               <span>Para ser positivo debería sacar mas de 12 puntos</span>   
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span class="mt-2">Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='negativoasdi'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
               <span>Este resultado indica que la usted o la persona a examinar no ha superado el test de valoración inicial, dando negativo en el.</span>
               <span>Para ser positivo debería sacar mas de 12 puntos</span>   
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='dudosoasdi'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
               <span>Este resultado indica que usted o la persona a examinar ha dado resultado cerca del limite entre positivo y negativo</span>
               <span>Para ser positivo debería sacar mas de 12 puntos</span>      
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='positivoaaa'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
@@ -74,7 +74,7 @@
                 
               </table>
               <span>Su Resultado es: <b>A:</b>{{a}} <b>B:</b>{{b}}  <b>C:</b>{{c}}  <b>D:</b>{{d}}  <b>E:</b>{{e}}</span> 
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='negativoaaa'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
@@ -119,7 +119,7 @@
                 
               </table>
               <span>Su Resultado es: <b>A:</b>{{a}} <b>B:</b>{{b}}  <b>C:</b>{{c}}  <b>D:</b>{{d}}  <b>E:</b>{{e}}</span>  
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='dudosoaaa'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
@@ -163,29 +163,29 @@
                 
               </table>
               <span>Su Resultado es: <b>A:</b>{{a}} <b>B:</b>{{b}}  <b>C:</b>{{c}}  <b>D:</b>{{d}}  <b>E:</b>{{e}}</span> 
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='positivoaqa'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
               <span>Este resultado indica que usted o la persona a examinar ha superado el test de valoración inicial, dando positivo en él.</span>
               <span>Para ser positivo debería sacar mas de 30 puntos</span>   
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='negativoaqa'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
               <span>Este resultado indica que la usted o la persona a examinar no ha superado el test de valoración inicial, dando negativo en el.</span>
               <span>Para ser positivo debería sacar mas de 30 puntos</span>   
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
             <div *ngIf="resultado=='dudosoaqa'" id="info"class="card">
               <span>Has obtenido un resultado de: {{puntuacion}}</span>
               <span>Este resultado indica que usted o la persona a examinar ha dado resultado cerca del limite entre positivo y negativo</span>
               <span>Para ser positivo debería sacar mas de 30 puntos</span>   
-              <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+              <span>Si lo desea, a continuación se le indicará el procedimiento de lo que necesita para tener un diagnostico oficial y acceder a la lista de contactos de distintas asociaciones por toda España.</span>
             </div>
           </div>
           <div class="text-center">
-            <button class="btn btn-primary">Siguiente</button>
+            <button class="btn btn-primary" (click)="lista()">Siguiente</button>
           </div>
       </div>
     </div>  

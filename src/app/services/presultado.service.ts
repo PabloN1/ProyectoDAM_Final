@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class PresultadoService {
 
-  constructor() { }
+  constructor() { this.conresultado=false; }
 
   public resultado!:string
   public puntuacion!:any
@@ -14,4 +14,5 @@ export class PresultadoService {
   public C:any
   public D:any
   public E:any
+  public conresultado:boolean
 }

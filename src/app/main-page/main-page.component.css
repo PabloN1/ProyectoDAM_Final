@@ -57,3 +57,8 @@ body{
         font-size: x-large;
     }
 }
+
+#botones{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -13,19 +13,47 @@
     <div id="test_container" class="card row col-xl-10 offset-xl-1 col-8 offset-2" >
       <div>
         <div class="row card-body">
-            <div *ngIf="indice==0" id="info"class="card">
-                <div *ngFor="let indice of questions">
-                    <div>{{indice.Nombre}}</div>
+          <div *ngIf="indice==0" id="info" class="card">
+              <span>Pasos a seguir</span>
+              <span>1.</span>
+              <span>2.</span>
+              <span>3.</span>
+              <span>4.</span>
+              <span>5.</span>
+          </div>
+          
+          
+          <div *ngIf="indice==1" id="info"class="card">  
+            <div>
+              <div class="col-4">       
+                <select id="provincia" class="form-select">
+                <option selected>Seleccione una provincia</option>
+                <option *ngFor="let provincia of provincias" [value]="provincia">
+                  {{provincia}}
+                </option>
+                </select>
+              </div>
+              <div *ngFor="let filtrado of filtrados" class="row">
+                <div id="contacto1" class="card col-2">
+                  <img id="Imagen"src="{{filtrado.Imagen}}" class="img-fluid" alt="Responsive image">
                 </div>
-
-            
+                <div id="contacto" class="card col-10 col-xs-12">
+                  <span><b>Nombre:</b> {{filtrado.Nombre}}</span>
+                  <span><b>Descripción:</b> {{filtrado.Direccion}}</span>
+                  <span><b>Email:</b> {{filtrado.Email}}</span>
+                  <span><b>Numero1:</b> {{filtrado.Numero1}}</span>
+                  <span><b>Numero2:</b> {{filtrado.Numero2}}</span>
+                  <span><b>Web:</b><a href="{{filtrado.Web}}"> {{filtrado.Web}}</a></span>
+                </div>
+              </div>
             </div>
+          </div>
 
-            
+
         </div>
 
         <div class="text-center">
-            <button class="btn btn-primary" (click)="siguiente()">Siguiente</button>
+            <button id="boton" class="btn btn-primary" (click)="Filtrar()">Siguiente</button>
         </div>
       </div>
     </div>  

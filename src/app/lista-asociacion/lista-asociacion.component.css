@@ -43,7 +43,7 @@ body{
 
 #info{
     min-height: 550px;
-    text-align: center;
+    text-align: left;
 }
 
 @media (min-width: 1200px) {
@@ -56,4 +56,20 @@ body{
     #info{
         font-size: x-large;
     }
+
+}
+
+#edad{
+    margin-top: 20px;
+}
+
+
+
+#provincia{
+    margin-top: 20px;
+}
+
+#Imagen{
+    max-width:100%;
+    max-height:100%;
 }

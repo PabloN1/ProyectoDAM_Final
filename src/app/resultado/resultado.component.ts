@@ -26,4 +26,8 @@ public e:any;
      this.d=this.presultado.D
      this.e=this.presultado.E
   }
+
+  public lista(){
+    this.router.navigate(['./lista-asociacion'])
+  }
 }

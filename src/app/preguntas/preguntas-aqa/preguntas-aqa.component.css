@@ -12,10 +12,6 @@ body{
     width: 100px;
 }
 
-#Siguiente{
-    margin-left: 4px;
-}
-
 #head_page{
     background-color: rgb(139, 248, 248);
     text-align: center;
@@ -47,26 +43,34 @@ body{
     #info{
         font-size: large;
     }
+
+    #Siguiente{
+        margin-left: 0px;
+    }
+
+    #pregunta{
+        margin-top: 20px;
+        height: 100px;
+    }
 }
 
 @media (min-width:  1199.98px) {
     #info{
         font-size: x-large;
     }
+
+    #Siguiente{
+        margin-left: 4px;
+    }
 }
 
 #respuestas{
-    padding-top: 50px;
+    padding-top: 80px;
     text-align: left;
 }
 
-#pregunta{
-    margin-top: 20px;
-    height: 100px;
-}
-
 #r{
-    margin-top: 35px;
+    margin-top: 25px;
     height: 50px;
     background-color: #e6e6e6;
     border-radius: 4px;

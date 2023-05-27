@@ -10,47 +10,24 @@ import { DatoUsuarioService } from '../services/dato-usuario.service';
 })
 export class ListaAsociacionComponent {
   public questions: any[]=[];
+  public filtrados:any[]=[];
+  public provincias:any[]=[];
   public indice=0
   constructor(private firestore: Firestore, private router: Router, private route: ActivatedRoute, private datoUsuario: DatoUsuarioService){
     this.getData()
   }
 
-  public siguiente(){
-    var genero=document.getElementById("genero") as HTMLInputElement;
-    var edad= document.getElementById("edad") as HTMLInputElement;
-
-
-    this.indice++
-    this.datoUsuario.edad=edad.value;
-    this.datoUsuario.genero=genero.value;
-    if(this.datoUsuario.edad=='Seleccione su edad' || this.datoUsuario.genero=='Seleccione su género'){
-      alert("Rellene todos los campos")
+  public Filtrar(){
+    if(this.indice==0){
+      this.indice++;
+      var a=document.getElementById("boton") as HTMLInputElement;
+      a.innerHTML="Filtrado"
     }else{
-      this.router.navigate(['/preguntas-ea'])
+      var provi=document.getElementById("provincia") as HTMLInputElement;
+      console.log(provi.value)
+      this.filtrados=this.questions.filter(asper => asper.Provincia === provi.value)
+      console.log(this.filtrados)
     }
-    
-      /*switch(edad.value){
-        case '1':
-          this.datoUsuario.edad=edad.value;
-          this.datoUsuario.genero=genero.value;
-          this.router.navigate(['/preguntas-asdi'])
-          
-          break;
-        case '2':
-          this.datoUsuario.edad=edad.value;
-          this.datoUsuario.genero=genero.value;
-          this.router.navigate(['/preguntas-aqa'])
-          
-          break;
-        case '3':
-          this.datoUsuario.edad=edad.value;
-          this.datoUsuario.genero=genero.value;
-          this.router.navigate(['/preguntas-aaa'])
-          break;
-        default:
-          alert("Rellene todos los campos")
-          break;
-      }*/
   }
 
   getData(){
@@ -58,6 +35,12 @@ export class ListaAsociacionComponent {
     collectionData(collectionInstance).subscribe(val => {
       console.log(val)
       this.questions=val
+      for (let index = 0; index < this.questions.length; index++) {
+        this.provincias.push(this.questions[index].Provincia);
+      }
+      this.provincias=[...new Set(this.provincias)];
+      this.provincias.sort()
+      console.log(this.provincias)
     })
   }
 
