@@ -14,7 +14,7 @@
       <div>
         <div class="row card-body">
           <div *ngIf="indice==0" id="info" class="card">
-              <span>Pasos a seguir</span>
+              <h3>Pasos a seguir</h3>
               <span>1.</span>
               <span>2.</span>
               <span>3.</span>
@@ -25,7 +25,7 @@
           
           <div *ngIf="indice==1" id="info"class="card">  
             <div>
-              <div class="col-4">       
+              <div class="col-4 col-xs-12">       
                 <select id="provincia" class="form-select">
                 <option selected>Seleccione una provincia</option>
                 <option *ngFor="let provincia of provincias" [value]="provincia">

@@ -29,11 +29,12 @@
             </div>
 
             <div *ngIf="indice>=1" id="datosUsuario" class="card">
-              <div class="col-5">
-                <div >
+              <h3>Introduzca sus datos</h3>
+              <div class="col-12 col-sm-2">
+                <div class="mt-4">
                   <span>Edad</span>
                   <select id="edad" class="form-select">
-                    <option selected>Seleccione su edad</option>
+                    <option selected>Seleccione uno</option>
                     <option value="1">6 - 9 años</option>
                     <option value="2">9 - 16 años</option>
                     <option value="3">Mayor de 16 años</option>
@@ -43,7 +44,7 @@
                 <div class="mt-4">
                   <span>Género</span>
                   <select id="genero" class="form-select">
-                    <option selected>Seleccione su género</option>
+                    <option selected>Seleccione uno</option>
                     <option value="hombre">Hombre</option>
                     <option value="mujer">Mujer</option>
                   </select>

@@ -15,23 +15,29 @@
         <div class="row card-body">
             
             <div *ngIf="resultado=='positivo'" id="info"class="card">
+                <h2>Resultado</h2>
                 <span>Has obtenido un resultado de: {{puntuacion}}</span>
-                <span>Este resultado indica que usted o la persona a examinar ha superado el test de valoración inicial, dando positivo en él.</span>
-                <span>Para ser positivo debería sacar mas de 36 puntos o una media superior a 2 en caso de haber contestado 2 preguntas o mas en No observado</span>   
-                <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
+                <span>Este resultado indica que usted o el/la examinado sea una persona con Trastorno del Espectro del Autismo(TEA)</span>
+                <span>Para ser una persona con TEA debería sacar mas de 36 puntos o una media superior a 2 en caso de haber contestado 2 preguntas o mas en No observado</span>   
+                <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea, acceder a la lista de contactos de distintas asociaciones.</span>
+                <span>Recuerde que este test <b>NO</b> es un diagnóstico, y que si quiere un diagnóstico deberá ser realizado por profesionales. </span>
             </div>
             <div *ngIf="resultado=='negativo'" id="info"class="card">
+                <h2>Resultado</h2>
                 <span>Has obtenido un resultado de: {{puntuacion}}</span>
-                <span>Este resultado indica que la usted o la persona a examinar no ha superado el test de valoración inicial, dando negativo en el.</span>
-                <span>Para ser positivo debería sacar mas de 36 puntos o una media superior a 2 en caso de haber contestado 2 preguntas o mas en No observado</span>   
+                <span>Este resultado indica que usted o el/la examinado no sea una persona con Trastorno del Espectro del Autismo(TEA)</span>
+                <span>Para ser una persona con TEA debería sacar mas de 36 puntos o una media superior a 2 en caso de haber contestado 2 preguntas o mas en No observado</span>   
                 <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
-            </div>
+                <span>Recuerde que este test <b>NO</b> es un diagnóstico, y que si quiere un diagnóstico deberá ser realizado por profesionales. </span>
+              </div>
             <div *ngIf="resultado=='dudoso'" id="info"class="card">
+                <h2>Resultado</h2>
                 <span>Has obtenido un resultado de: {{puntuacion}}</span>
-                <span>Este resultado indica que usted o la persona a examinar ha dado resultado cerca del limite entre positivo y negativo</span>
-                <span>Para ser positivo debería sacar mas de 36 puntos o una media superior a 2 en caso de haber contestado 2 preguntas o mas en No observado</span>   
+                <span>Este resultado indica que usted o el/la examinado puede que sea una persona con Trastorno del Espectro del Autismo(TEA) debido a su puntuación cercana al punto de decisión</span>
+                <span>Para ser una persona con TEA debería sacar mas de 36 puntos o una media superior a 2 en caso de haber contestado 2 preguntas o mas en No observado</span>   
                 <span>Sin embargo, para estar más seguro se le hará un segundo test acorde a su edad y género o si lo desea acceder a la lista de contactos de distintas asociaciones.</span>
-            </div>
+                <span>Recuerde que este test <b>NO</b> es un diagnóstico, y que si quiere un diagnóstico deberá ser realizado por profesionales. </span>
+              </div>
           </div>
           <div id="botones" class="text-center">
             <button id="Anterior" type="button" class="btn btn-primary" (click)="tests()">Test</button>
