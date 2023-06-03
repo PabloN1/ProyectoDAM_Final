@@ -21,7 +21,7 @@ export class ListaAsociacionComponent {
     if(this.indice==0){
       this.indice++;
       var a=document.getElementById("boton") as HTMLInputElement;
-      a.innerHTML="Filtrado"
+      a.innerHTML="Filtrar"
     }else{
       var provi=document.getElementById("provincia") as HTMLInputElement;
       console.log(provi.value)

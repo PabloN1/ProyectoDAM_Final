@@ -24,7 +24,7 @@ body{
     background-color: white;
     min-height: 650px;
     margin-top: 20px;
-    box-shadow: 0 0 2px 2px #888;
+    box-shadow: 4px 4px 4px #888;
     display: flex;
 }
 
@@ -78,4 +78,8 @@ body{
 
 #numeropregunta{
     font-size: medium;
+}
+
+#botones{
+    margin-top: 20px;
 }

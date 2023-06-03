@@ -1,3 +1,7 @@
+img{
+    height: 100%;
+    width: 100%;
+}
 body{
     background-color: rgb(231, 255, 255);
     min-height:100vh;;
@@ -31,7 +35,7 @@ body{
     background-color: white;
     min-height: 650px;
     margin-top: 20px;
-    box-shadow: 0 0 2px 2px #888;
+    box-shadow: 4px 4px 4px #888;
     display: flex;
 }
 
@@ -69,7 +73,15 @@ body{
     margin-top: 20px;
 }
 
-#Imagen{
-    max-width:100%;
-    max-height:100%;
+#lista{
+    margin-top: 20px;
+}
+
+
+#contacto{
+    box-shadow: 4px 4px 4px #888;
+}
+
+#contacto1{
+    box-shadow: 4px 4px 4px #888;
 }

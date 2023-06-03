@@ -10,16 +10,16 @@
 <body>
    
 
-    <div id="test_container" class="card row col-xl-10 offset-xl-1 col-8 offset-2" >
+    <div id="test_container" class="card row col-10 offset-1" >
       <div>
         <div class="row card-body">
           <div *ngIf="indice==0" id="info" class="card">
-              <h3>Pasos a seguir</h3>
-              <span>1.</span>
-              <span>2.</span>
-              <span>3.</span>
-              <span>4.</span>
-              <span>5.</span>
+              <h3>Recomendaciones a seguir</h3>
+              <br>
+              <span><b>1.</b> Pedir cita en una asociación con especialistas que puedan realizar una entrevista y una evaluación inicial. A continuación se le mostrará una lista de las distintas asociaciones en España con las que puede contactar e informarse.</span>
+              <span><b>2.</b> A su vez, pedir cita con Salud mental para poder realizar un diagnostico. Este diagnostico además puede ser corroborado con la evaluación ofrecida por la asociación a la que haya acudido</span>
+              <span><b>3.</b>En caso de recibir antes la cita con Salud mental, el diagnostico ofrecido por está, puede ser utilizado a la hora de ser evaluado con un especialista con personas con TEA.</span>
+              <span><b>4.</b>Una vez realizado y obtenido su diagnóstico, puede utilizarlo para poder obtener su certificado de discapacidad consultando en los servicios sociales de tu ayuntamiento, comunidad autónoma, hospital o asociación</span>
           </div>
           
           
@@ -33,11 +33,11 @@
                 </option>
                 </select>
               </div>
-              <div *ngFor="let filtrado of filtrados" class="row">
-                <div id="contacto1" class="card col-2">
-                  <img id="Imagen"src="{{filtrado.Imagen}}" class="img-fluid" alt="Responsive image">
+              <div id="lista" *ngFor="let filtrado of filtrados" class="row">
+                <div id="contacto1" class="card col-3">
+                  <img id="Imagen"src="{{filtrado.Imagen}}" style="" alt="Responsive image">
                 </div>
-                <div id="contacto" class="card col-10 col-xs-12">
+                <div id="contacto" class="card col-9">
                   <span><b>Nombre:</b> {{filtrado.Nombre}}</span>
                   <span><b>Descripción:</b> {{filtrado.Direccion}}</span>
                   <span><b>Email:</b> {{filtrado.Email}}</span>

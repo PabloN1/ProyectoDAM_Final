@@ -23,7 +23,6 @@ body{
     background-color: rgb(139, 248, 248);
     text-align: center;
     height: 75px;
-    margin-top: 20px;
     box-shadow: 0 0 2px 2px #888;
 }
 
@@ -31,7 +30,7 @@ body{
     background-color: white;
     min-height: 650px;
     margin-top: 20px;
-    box-shadow: 0 0 2px 2px #888;
+    box-shadow: 4px 4px 4px #888;
     display: flex;
 }
 
@@ -45,4 +44,9 @@ body{
     min-height: 550px;
     text-align: center;
     font-size: x-large;
+}
+
+#linkeo{
+    text-decoration: none;
+    color: black;
 }
