@@ -26,5 +26,5 @@ Este proyecto está formado por 8 componentes distintos:
 Este proyecto está realizado con Angular, Bootstrap y Firestore database.
 
 
-# Referencias
+## Referencias
 Los tests son usados como referencia de la página: https://espectroautista.info/
