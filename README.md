@@ -1,27 +1,30 @@
-# PTea
+# [Test TEA](https://aspergertest.vercel.app/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+Este proyecto es una página web donde se realizan tests para saber si una persona es o no es una persona con TEA y ofrecerle contactos con distintas asociaciones especializadas en TEA que se encuentre en España
 
-## Development server
+## USO
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para usar esta web, primero tendrá que introducir unos datos iniciales y responder un test general para hacer una orientación inicial. 
+Una vez completado el test y tenga sus resultasdo se le ofrecerá la opción de consultar la lista de asociaciones o hacer un segundo test acorde a los datos introducidos. 
+Si escoge la opción del segundo test, repetiria los mismos pasos que del primer test hasta obtener un resultado y que le ofrezca la posibilidad si lo desea de consultar la lista de asociaciones.
+En la lista de asociaciones, se le indicarán recomendaciones que debe tomar si planea o quiere tener un diagnóstico, como debe de hacerlo y a continuación podrá seleccionar las distintas asociaciones y filtrarlas por provincia.
 
-## Code scaffolding
+## Componentes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este proyecto está formado por 8 componentes distintos:
+-main-page: Página inicial del proyecto
+-preguntas-ea: Test de la Escala Autónoma para la Detección del Síndrome de Asperger y el Autismo de Alto Nivel de Funcionamiento (EA)
+-preguntas-asdi: Test de Entrevista Diagnóstica para el Síndrome de Asperger (ASDI)
+-preguntas-aqa: Cociente de Espectro Autista (versión para Adolescentes) (AQA)
+-preguntas-aaa: Evaluador de Asperger en Adultos (AAA)
+-resultado-ea: Página donde se almacenará el resultado del test EA
+-resultado: Página donde se almacenará los resultados de cada uno de los tests excepto el del EA.
+-lista-asociacion: Pagina donde contiene las recomendaciones a seguir para obtener un diagnostico y la lista de distintas asociaciones en España.
 
-## Build
+## Lenguaje
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este proyecto está realizado con Angular, Bootstrap y Firestore database.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Referencias
+Los tests son usados como referencia de la página: https://espectroautista.info/
