@@ -13,12 +13,19 @@ En la lista de asociaciones, se le indicarán recomendaciones que debe tomar si 
 
 Este proyecto está formado por 8 componentes distintos:
 -main-page: Página inicial del proyecto
+
 -preguntas-ea: Test de la Escala Autónoma para la Detección del Síndrome de Asperger y el Autismo de Alto Nivel de Funcionamiento (EA)
+
 -preguntas-asdi: Test de Entrevista Diagnóstica para el Síndrome de Asperger (ASDI)
+
 -preguntas-aqa: Cociente de Espectro Autista (versión para Adolescentes) (AQA)
+
 -preguntas-aaa: Evaluador de Asperger en Adultos (AAA)
+
 -resultado-ea: Página donde se almacenará el resultado del test EA
+
 -resultado: Página donde se almacenará los resultados de cada uno de los tests excepto el del EA.
+
 -lista-asociacion: Pagina donde contiene las recomendaciones a seguir para obtener un diagnostico y la lista de distintas asociaciones en España.
 
 ## Lenguaje
