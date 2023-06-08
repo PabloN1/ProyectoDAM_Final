@@ -20,7 +20,9 @@ export class PreguntasASDIComponent {
     for (let index = 0; index < this.questions.length; index++) {
       this.puntuacionAnterior.push(0);
     }
-    
+    console.log(this.datousuario.edad)
+    console.log(this.datousuario.genero)
+    console.log(this.datousuario.resultadoEA)
   }
 
   public siguiente(){
@@ -51,10 +53,13 @@ export class PreguntasASDIComponent {
       console.log("FIN");
       if((this.puntuacion>=10 && this.puntuacion<12) || (this.puntuacion<=10 && this.puntuacion>8) ){
         this.presultado.resultado="dudosoasdi";
+        this.datousuario.resultado="dudoso"
       }else if(this.puntuacion>12){
         this.presultado.resultado="positivoasdi"
+        this.datousuario.resultado="positivo"
       }else{
         this.presultado.resultado="negativoasdi"
+        this.datousuario.resultado="negativo"
       }
       this.presultado.puntuacion=this.puntuacion;
       this.router.navigate(['resultado']);

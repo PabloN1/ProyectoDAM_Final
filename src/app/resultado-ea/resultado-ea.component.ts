@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PresultadoService } from '../services/presultado.service';
 import { DatoUsuarioService } from '../services/dato-usuario.service';
+import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-resultado-ea',
@@ -13,7 +14,7 @@ export class ResultadoEAComponent {
   public puntuacion:any;
   public edad:any;
   public genero:any;
-  constructor(private router: Router, private route: ActivatedRoute,
+  constructor(private firestore: Firestore,private router: Router, private route: ActivatedRoute,
     private presultado: PresultadoService, private datoUsuario: DatoUsuarioService){
     this.resultado=this.presultado.resultado;
     this.puntuacion=this.presultado.puntuacion;
@@ -22,31 +23,50 @@ export class ResultadoEAComponent {
     if(this.edad===undefined || this.genero===undefined){
       this.router.navigate(['/'])
     }
+
+     
   }
 
   tests(){
     switch(this.edad){
       case '1':
-        this.datoUsuario.edad=this.edad.value;
-        this.datoUsuario.genero=this.genero.value;
+        console.log(this.datoUsuario.edad)
+        console.log(this.datoUsuario.genero)
         this.router.navigate(['/preguntas-asdi'])
         
         break;
       case '2':
-        this.datoUsuario.edad=this.edad.value;
-        this.datoUsuario.genero=this.genero.value;
+        console.log(this.datoUsuario.edad)
+        console.log(this.datoUsuario.genero)
         this.router.navigate(['/preguntas-aqa'])
         
         break;
       case '3':
-        this.datoUsuario.edad=this.edad.value;
-        this.datoUsuario.genero=this.genero.value;
+        console.log(this.datoUsuario.edad)
+        console.log(this.datoUsuario.genero)
         this.router.navigate(['/preguntas-aaa'])
         break;
     }
   }
 
+  public addData(data:any){
+    const collectionInstance = collection(this.firestore,'Analitica');
+    addDoc(collectionInstance, data)
+      .then(() => {
+        console.log('Se ha subido');
+      }).catch((err)=>{
+        console.log(err)
+      });
+  }
+  
   contactos(){
+    const data={
+      Edad: this.datoUsuario.edad,
+      Genero: this.datoUsuario.genero,
+      Resultado: '',
+      ResultadoEA: this.datoUsuario.resultadoEA
+    }
+    this.addData(data);
     this.router.navigate(['/lista-asociacion'])
   }
 }

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DatoUsuarioService } from '../services/dato-usuario.service';
+import { Chart, ChartItem, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 @Component({
   selector: 'app-lista-asociacion',
@@ -15,19 +17,37 @@ export class ListaAsociacionComponent {
   public indice=0
   constructor(private firestore: Firestore, private router: Router, private route: ActivatedRoute, private datoUsuario: DatoUsuarioService){
     this.getData()
+    console.log(this.datoUsuario.edad)
+    console.log(this.datoUsuario.genero)
+    console.log(this.datoUsuario.resultadoEA)
+    console.log(this.datoUsuario.resultado)
+
   }
 
   public Filtrar(){
+    var provi=document.getElementById("provincia") as HTMLInputElement;
+    console.log(provi.value)
+    this.filtrados=this.questions.filter(asper => asper.Provincia === provi.value)
+    console.log(this.filtrados)
+    console.log(this.indice)
+  }
+
+  public Recomendacion(){
     if(this.indice==0){
       this.indice++;
       var a=document.getElementById("boton") as HTMLInputElement;
-      a.innerHTML="Filtrar"
+      a.innerHTML="Pasos"
     }else{
-      var provi=document.getElementById("provincia") as HTMLInputElement;
-      console.log(provi.value)
-      this.filtrados=this.questions.filter(asper => asper.Provincia === provi.value)
-      console.log(this.filtrados)
+      if(this.indice==2){
+        this.indice=0;
+        var a=document.getElementById("boton") as HTMLInputElement;
+      a.innerHTML="Listado"
+      }
     }
+  }
+
+  public estadistica(){
+     this.indice=2; 
   }
 
   getData(){
@@ -44,6 +64,7 @@ export class ListaAsociacionComponent {
     })
   }
 
+  
 
 }
 

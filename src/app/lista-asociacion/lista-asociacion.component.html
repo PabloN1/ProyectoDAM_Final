@@ -25,13 +25,19 @@
           
           <div *ngIf="indice==1" id="info"class="card">  
             <div>
-              <div class="col-4 col-xs-12">       
-                <select id="provincia" class="form-select">
-                <option selected>Seleccione una provincia</option>
-                <option *ngFor="let provincia of provincias" [value]="provincia">
-                  {{provincia}}
-                </option>
-                </select>
+              <div class="row col-10 col-xs-12">
+                <div class="col-4">
+                  <select id="provincia" class="form-select">
+                    <option selected>Seleccione una provincia</option>
+                    <option *ngFor="let provincia of provincias" [value]="provincia">
+                      {{provincia}}
+                    </option>
+                    </select>
+                </div>       
+                
+                <div id="filtrar" class="col-2">
+                  <button class="btn btn-primary" (click)="Filtrar()">Filtrar</button>
+                </div>
               </div>
               <div id="lista" *ngFor="let filtrado of filtrados" class="row">
                 <div id="contacto1" class="card col-3">
@@ -49,11 +55,17 @@
             </div>
           </div>
 
+          <div *ngIf="indice==2" id="info"class="card"> 
+
+              <app-chart></app-chart>
+          </div>
+
 
         </div>
 
         <div class="text-center">
-            <button id="boton" class="btn btn-primary" (click)="Filtrar()">Siguiente</button>
+            <button id="boton" class="btn btn-primary" (click)="Recomendacion()">Listado</button>
+            <button id="boton1" class="btn btn-primary" (click)="estadistica()">Estadistica</button>
         </div>
       </div>
     </div>  

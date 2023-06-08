@@ -23,7 +23,8 @@ export class PreguntasEAComponent {
     if(datousuario.genero===undefined || datousuario.edad===undefined){
       this.router.navigate(['/'])
     }
-    console.log(datousuario.genero)
+    console.log(this.datousuario.genero)
+    console.log(this.datousuario.edad)
   }
 
   public siguiente(){
@@ -102,19 +103,25 @@ export class PreguntasEAComponent {
         sumtotal=sumtotal/(this.puntuacionAnterior.length-contador);
         if(sumtotal>=1.5 && sumtotal<=2.5){
           this.presultado.resultado="dudoso"
+          this.datousuario.resultadoEA="dudoso"
         }else if(sumtotal>2.5){
           this.presultado.resultado="positivo"
+          this.datousuario.resultadoEA="positivo"
         }else{
           this.presultado.resultado="negativo"
+          this.datousuario.resultadoEA="negativo"
         }
         this.presultado.puntuacion=sumtotal
       }else{
         if((this.puntuacion>=36 && this.puntuacion<38) || (this.puntuacion<=36 && this.puntuacion>34)){
           this.presultado.resultado="dudoso"
+          this.datousuario.resultadoEA="dudoso"
         }else if(this.puntuacion>=38){
           this.presultado.resultado="positivo"
+          this.datousuario.resultadoEA="positivo"
         }else{
           this.presultado.resultado="negativo"
+          this.datousuario.resultadoEA="negativo"
         }
         this.presultado.puntuacion=this.puntuacion
       }

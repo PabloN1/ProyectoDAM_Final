@@ -60,7 +60,6 @@ body{
     #info{
         font-size: x-large;
     }
-
 }
 
 #edad{
@@ -84,4 +83,22 @@ body{
 
 #contacto1{
     box-shadow: 4px 4px 4px #888;
+}
+
+#boton{
+    margin-right: 2px;
+}
+
+#boton1{
+    margin-left: 2px;
+}
+
+#divChart{
+    display: block;
+    width: 400px;
+    height: 400px;
+}
+
+#filtrar{
+    margin-top: 20px;
 }

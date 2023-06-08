@@ -20,7 +20,9 @@ export class PreguntasAQAComponent {
     for (let index = 0; index < this.questions.length; index++) {
       this.puntuacionAnterior.push(0);
     }
-    console.log(datousuario.genero)
+    console.log(this.datousuario.edad)
+    console.log(this.datousuario.genero)
+    console.log(this.datousuario.resultadoEA)
   }
 
   public siguiente(){
@@ -75,10 +77,13 @@ export class PreguntasAQAComponent {
       console.log("FIN");
       if((this.puntuacion>=30 && this.puntuacion<32) || (this.puntuacion<=30 && this.puntuacion>28)){
         this.presultado.resultado="dudosoaqa"
+        this.datousuario.resultado="dudoso"
       }else if(this.puntuacion>=32){
         this.presultado.resultado="positivoaqa"
+        this.datousuario.resultado="positivo"
       }else{
         this.presultado.resultado="negativoaqa"
+        this.datousuario.resultado="negativo"
       }
       this.presultado.puntuacion=this.puntuacion;
       this.router.navigate(['resultado'])

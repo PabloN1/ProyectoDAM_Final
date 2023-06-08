@@ -20,11 +20,14 @@ export class PreguntasAAAComponent {
   public puntuacionE=0;
   public dudoso=0;
   constructor(private firestore: Firestore, private router: Router, private route: ActivatedRoute,
-    private datousuario: DatoUsuarioService, private presultado: PresultadoService){
+    private datoUsuario: DatoUsuarioService, private presultado: PresultadoService){
     this.getData();
     for (let index = 0; index < this.questions.length; index++) {
       this.puntuacionAnterior.push(0);
     }
+    console.log(this.datoUsuario.edad)
+    console.log(this.datoUsuario.genero)
+    console.log(this.datoUsuario.resultadoEA)
   }
 
   public siguiente(){
@@ -61,16 +64,21 @@ export class PreguntasAAAComponent {
         }
         if(this.puntuacionE<5){
           this.presultado.resultado="negativoaaa"
+          this.datoUsuario.resultado="negativo"
         }
         if(this.dudoso==0){
           this.presultado.resultado="positivoaaa"
+          this.datoUsuario.resultado="positivo"
         }else if(this.dudoso<2){
           this.presultado.resultado="dudosoaaa"
+          this.datoUsuario.resultado="dudoso"
         }else{
           this.presultado.resultado="negativoaaa"
+          this.datoUsuario.resultado="negativo"
         } 
       }else{
         this.presultado.resultado="negativoaaa"
+        this.datoUsuario.resultado="negativo"
       }
       this.presultado.puntuacion=this.puntuacion;
       this.presultado.A=this.puntuacionA

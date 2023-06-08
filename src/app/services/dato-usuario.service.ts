@@ -9,4 +9,6 @@ export class DatoUsuarioService {
 
   public edad!: string;
   public genero!: string;
+  public resultadoEA!: string;
+  public resultado!: string;
 }

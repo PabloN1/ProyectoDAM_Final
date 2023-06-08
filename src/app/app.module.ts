@@ -14,7 +14,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResultadoComponent } from './resultado/resultado.component';
 import { ResultadoEAComponent } from './resultado-ea/resultado-ea.component';
-import { ListaAsociacionComponent } from './lista-asociacion/lista-asociacion.component'
+import { ListaAsociacionComponent } from './lista-asociacion/lista-asociacion.component';
+import { ChartComponent } from './chart/chart.component'
 
 const routes: Routes = []
 @NgModule({
@@ -28,7 +29,8 @@ const routes: Routes = []
     MainPageComponent,
     ResultadoComponent,
     ResultadoEAComponent,
-    ListaAsociacionComponent
+    ListaAsociacionComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
