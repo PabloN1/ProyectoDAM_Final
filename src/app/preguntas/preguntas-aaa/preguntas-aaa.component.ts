@@ -43,39 +43,32 @@ export class PreguntasAAAComponent {
       this.addPuntos();
     }
 
+    
     if(this.indice==this.questions.length){
       console.log("FIN");
-      //dar margen de error
-
       if(this.puntuacion>=15){
         if(this.puntuacionA<3){
           this.dudoso++;
         }
-
         if(this.puntuacionB<3){
           this.dudoso++;
         }
-
         if(this.puntuacionC<3){
           this.dudoso++;
         }
-
         if(this.puntuacionD<3){
           this.dudoso++;
         }
-
         if(this.puntuacionE<5){
           this.presultado.resultado="negativoaaa"
         }
-
         if(this.dudoso==0){
           this.presultado.resultado="positivoaaa"
         }else if(this.dudoso<2){
           this.presultado.resultado="dudosoaaa"
         }else{
           this.presultado.resultado="negativoaaa"
-        }
-        
+        } 
       }else{
         this.presultado.resultado="negativoaaa"
       }
@@ -120,8 +113,6 @@ export class PreguntasAAAComponent {
       console.log("D: "+this.puntuacionD)
       console.log("E: "+this.puntuacionE)
     }
-    
-    
   }
 
   public addPuntos(){
