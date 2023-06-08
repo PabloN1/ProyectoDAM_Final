@@ -1,18 +1,19 @@
-body{
+body {
     background-color: rgb(231, 255, 255);
-    min-height:100vh;;
-    overflow:hidden;
+    min-height: 100vh;
+    ;
+    overflow: hidden;
     margin-bottom: 0%;
-    
+
 }
 
-.btn{
+.btn {
     background-color: brown;
     color: white;
     width: 100px;
 }
 
-#head_page{
+#head_page {
     background-color: rgb(139, 248, 248);
     text-align: center;
     height: 75px;
@@ -20,7 +21,7 @@ body{
     box-shadow: 0 0 2px 2px #888;
 }
 
-#test_container{
+#test_container {
     background-color: white;
     min-height: 650px;
     margin-top: 20px;
@@ -28,58 +29,58 @@ body{
     display: flex;
 }
 
-#datosUsuario{
+#datosUsuario {
     min-height: 550px;
     font-size: large;
     padding: 30px;
 }
 
-#info{
+#info {
     min-height: 550px;
     text-align: left;
 }
 
 @media (min-width: 1200px) {
-    #info{
+    #info {
         font-size: large;
     }
 
-    #Siguiente{
+    #Siguiente {
         margin-left: 0px;
     }
 
-    #pregunta{
+    #pregunta {
         margin-top: 20px;
         height: 100px;
     }
 }
 
-@media (min-width:  1199.98px) {
-    #info{
+@media (min-width: 1199.98px) {
+    #info {
         font-size: x-large;
     }
 
-    #Siguiente{
+    #Siguiente {
         margin-left: 4px;
     }
 }
 
-#respuestas{
+#respuestas {
     padding-top: 80px;
     text-align: left;
 }
 
-#r{
+#r {
     margin-top: 25px;
     height: 50px;
     background-color: #e6e6e6;
     border-radius: 4px;
 }
 
-#numeropregunta{
+#numeropregunta {
     font-size: medium;
 }
 
-#botones{
+#botones {
     margin-top: 20px;
 }

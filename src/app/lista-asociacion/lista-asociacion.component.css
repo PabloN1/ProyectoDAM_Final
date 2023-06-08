@@ -1,29 +1,31 @@
-img{
+img {
     height: 100%;
     width: 100%;
 }
-body{
+
+body {
     background-color: rgb(231, 255, 255);
-    min-height:100vh;;
-    overflow:hidden;
+    min-height: 100vh;
+    ;
+    overflow: hidden;
     margin-bottom: 0%;
-    
+
 }
 
-.btn{
+.btn {
     background-color: brown;
     color: white;
     width: 100px;
 }
 
-#Siguiente{
+#Siguiente {
 
     margin-top: auto;
     margin-bottom: 7px;
-    
+
 }
 
-#head_page{
+#head_page {
     background-color: rgb(139, 248, 248);
     text-align: center;
     height: 75px;
@@ -31,7 +33,7 @@ body{
     box-shadow: 0 0 2px 2px #888;
 }
 
-#test_container{
+#test_container {
     background-color: white;
     min-height: 650px;
     margin-top: 20px;
@@ -39,66 +41,66 @@ body{
     display: flex;
 }
 
-#datosUsuario{
+#datosUsuario {
     min-height: 550px;
     font-size: large;
     padding: 30px;
 }
 
-#info{
+#info {
     min-height: 550px;
     text-align: left;
 }
 
 @media (min-width: 1200px) {
-    #info{
+    #info {
         font-size: small;
     }
 }
 
-@media (min-width:  1199.98px) {
-    #info{
+@media (min-width: 1199.98px) {
+    #info {
         font-size: x-large;
     }
 }
 
-#edad{
+#edad {
     margin-top: 20px;
 }
 
 
 
-#provincia{
+#provincia {
     margin-top: 20px;
 }
 
-#lista{
+#lista {
     margin-top: 20px;
 }
 
 
-#contacto{
+#contacto {
     box-shadow: 4px 4px 4px #888;
 }
 
-#contacto1{
+#contacto1 {
     box-shadow: 4px 4px 4px #888;
 }
 
-#boton{
+#boton {
     margin-right: 2px;
 }
 
-#boton1{
+#boton1 {
     margin-left: 2px;
 }
 
-#divChart{
+#divChart {
     display: block;
     width: 400px;
     height: 400px;
 }
 
-#filtrar{
+#filtrar {
     margin-top: 20px;
 }

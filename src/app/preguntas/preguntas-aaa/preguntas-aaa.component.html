@@ -17,11 +17,9 @@
         <div class="card" id="info">
           <span id="numeropregunta">Pregunta {{indice+1}} de {{questions.length}} </span>
           <div class="progress">
-            <div id="progreso"class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
-            style="width: 10%" 
-            aria-valuenow="10"
-            [attr.aria-valuenow]="indice+1" 
-            [style.width.%]="indice*100/this.questions.length">  
+            <div id="progreso" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+              style="width: 10%" aria-valuenow="10" [attr.aria-valuenow]="indice+1"
+              [style.width.%]="indice*100/this.questions.length">
             </div>
           </div>
           <h3 id="pregunta">{{questions[indice].Pregunta}}</h3>

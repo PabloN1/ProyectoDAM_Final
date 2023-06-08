@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
+
 <body>
-   
 
-    <div id="test_container" class="card row col-10 offset-1">
-      <div>
-        <div class="row card-body">
-            <div *ngIf="indice==0" id="info"class="card">
-              <span>¡Bienvenido/a a nuestra página web de pruebas para el Trastorno del Espectro Autista (TEA)! Si tú o alguien cercano a ti muestra señales de posibles características del TEA y estás buscando respuestas, estás en el lugar correcto. Nuestro objetivo es proporcionar una evaluación confiable y precisa para ayudarte a entender mejor tus inquietudes.</span>
-              <span>Al responder a una serie de preguntas cuidadosamente seleccionadas, obtendrás una visión inicial de la posibilidad de que el TEA esté presente. Sin embargo, es importante tener en cuenta que nuestras pruebas <b>NO</b> reemplazan una evaluación profesional, sino que te ofrecen una guía inicial.</span>
-              <span>Una vez que hayas completado el test y obtenido tu resultado, te proporcionaremos información detallada sobre asociaciones especializadas en TEA en tu zona geográfica específica en España. Estas asociaciones cuentan con profesionales capacitados y recursos adecuados para brindar apoyo y orientación en tu camino hacia el diagnóstico y el manejo del TEA.</span>
-            
+
+  <div id="test_container" class="card row col-10 offset-1">
+    <div>
+      <div class="row card-body">
+        <div *ngIf="indice==0" id="info" class="card">
+          <span>¡Bienvenido/a a nuestra página web de pruebas para el Trastorno del Espectro Autista (TEA)! Si tú o
+            alguien cercano a ti muestra señales de posibles características del TEA y estás buscando respuestas, estás
+            en el lugar correcto. Nuestro objetivo es proporcionar una evaluación confiable y precisa para ayudarte a
+            entender mejor tus inquietudes.</span>
+          <span>Al responder a una serie de preguntas cuidadosamente seleccionadas, obtendrás una visión inicial de la
+            posibilidad de que el TEA esté presente. Sin embargo, es importante tener en cuenta que nuestras pruebas
+            <b>NO</b> reemplazan una evaluación profesional, sino que te ofrecen una guía inicial.</span>
+          <span>Una vez que hayas completado el test y obtenido tu resultado, te proporcionaremos información detallada
+            sobre asociaciones especializadas en TEA en tu zona geográfica específica en España. Estas asociaciones
+            cuentan con profesionales capacitados y recursos adecuados para brindar apoyo y orientación en tu camino
+            hacia el diagnóstico y el manejo del TEA.</span>
+
+        </div>
+
+        <div *ngIf="indice>=1" id="datosUsuario" class="card">
+          <h3>Introduzca sus datos</h3>
+          <div class="col-12 col-sm-2">
+            <div class="mt-4">
+              <span>Edad</span>
+              <select id="edad" class="form-select">
+                <option selected>Seleccione uno</option>
+                <option value="1">6 - 9 años</option>
+                <option value="2">9 - 16 años</option>
+                <option value="3">Mayor de 16 años</option>
+              </select>
             </div>
 
-            <div *ngIf="indice>=1" id="datosUsuario" class="card">
-              <h3>Introduzca sus datos</h3>
-              <div class="col-12 col-sm-2">
-                <div class="mt-4">
-                  <span>Edad</span>
-                  <select id="edad" class="form-select">
-                    <option selected>Seleccione uno</option>
-                    <option value="1">6 - 9 años</option>
-                    <option value="2">9 - 16 años</option>
-                    <option value="3">Mayor de 16 años</option>
-                  </select>
-                </div>
-                
-                <div class="mt-4">
-                  <span>Género</span>
-                  <select id="genero" class="form-select">
-                    <option selected>Seleccione uno</option>
-                    <option value="hombre">Hombre</option>
-                    <option value="mujer">Mujer</option>
-                    <option value="binario">No Binario</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-                
-              </div>
+            <div class="mt-4">
+              <span>Género</span>
+              <select id="genero" class="form-select">
+                <option selected>Seleccione uno</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="binario">No Binario</option>
+                <option value="otro">Otro</option>
+              </select>
             </div>
+
           </div>
-          <div id="botones" class="text-center">
-            <button class="btn btn-primary" (click)="siguiente()">Siguiente</button>
-          </div>
+        </div>
       </div>
-    </div>  
-   
+      <div id="botones" class="text-center">
+        <button class="btn btn-primary" (click)="siguiente()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+
 </body>
-</html> 
+
+</html>
